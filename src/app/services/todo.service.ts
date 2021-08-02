@@ -13,5 +13,9 @@ const httpOptions = {
 })
 export class TodoService {
 
+  // Get todos api
+  todosUrl = 'https://jsonplaceholder.typicode.com/todos';
+  todosLimit = '?_limit=5';
+
   constructor() { }
 }
