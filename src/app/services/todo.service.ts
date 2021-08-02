@@ -1,4 +1,4 @@
-import { HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 // Setting up headers
@@ -17,5 +17,6 @@ export class TodoService {
   todosUrl = 'https://jsonplaceholder.typicode.com/todos';
   todosLimit = '?_limit=5';
 
-  constructor() { }
+  // Inject the http object for request
+  constructor(private http: HttpClient) { }
 }
